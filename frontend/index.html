@@ -1,0 +1,91 @@
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+    <script src="js/jquery.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  </head>
+  <body>
+    <div id="contentSpace">
+      <div id="commonContent"></div>
+      <div id="aboutUsDiv">
+        <h3>Welcome to Database Hotel</h3>
+        <p>Хотел Database е разположен в Банско, на 1 километър от кабинковия лифт.
+           Предлага спа център. Хотелът разполага със сауна и фитнес център.
+           На място има безплатен частен паркинг. Всички стаи разполагат с кабелна
+           телевизия. В някои от тях има кът за сядане. Всяка стая е със собствена
+           баня. На цялата територия на хотел Database е осигурен безплатен WiFi.
+           Осигурени са и съоръжения за барбекю. При заявка и срещу допълнително заплащане се организират трансфери.
+           Гостите могат да играят тенис на маса на място. Ски пистите на Банско са на 13 км, а комплекс Молерите е на 5 минути с кола.
+           За нашите гости това е любимата част на Банско, според независими отзиви.
+           Ние говорим на вашия език! </p>
+      </div>
+      <div class="slideshow-container">
+
+        <div class="mySlides fade">
+          <img src="img/hotel1.jpg" style="width:100%">
+        </div>
+
+        <div class="mySlides fade">
+          <img src="img/hotel4.jpg" style="width:100%">
+        </div>
+
+        <div class="mySlides fade">
+          <img src="img/hotel5.jpg" style="width:100%">
+        </div>
+
+        <div class="mySlides fade">
+          <img src="img/hotel8.jpg" style="width:100%">
+        </div>
+
+        <div class="mySlides fade">
+          <img src="img/hotel9.jpg" style="width:100%">
+        </div>
+
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+      </div>
+      <br>
+
+      <div style="text-align:center">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+        <span class="dot" onclick="currentSlide(4)"></span>
+        <span class="dot" onclick="currentSlide(5)"></span>
+      </div>
+    </div>
+    <script>
+      $(document).ready(function(){
+        $("#commonContent").load("common.html");
+      });
+      var slideIndex = 1;
+      showSlides(slideIndex);
+
+      function plusSlides(n) {
+        showSlides(slideIndex += n);
+      }
+
+      function currentSlide(n) {
+        showSlides(slideIndex = n);
+      }
+
+      function showSlides(n) {
+        var i;
+        var slides = document.getElementsByClassName("mySlides");
+        var dots = document.getElementsByClassName("dot");
+        if (n > slides.length) {slideIndex = 1}
+        if (n < 1) {slideIndex = slides.length}
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+        for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex-1].style.display = "block";
+        dots[slideIndex-1].className += " active";
+      }
+    </script>
+  </body>
+</html>
