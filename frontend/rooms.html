@@ -1,0 +1,85 @@
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+    <script src="js/jquery.js"></script>
+  </head>
+  <body>
+    <div id="contentSpace" style="overflow: auto;">
+      <div id="commonContent"></div>
+      <div id="roomsDescDiv">
+        <h3>Rooms</h3>
+        <p>Стаите които предлагаме са направени с една единствена цел - Вашият комфорт.</p>
+      </div>
+      <div class="contentLeft" style="position: relative;">
+        <div>
+          <img src="img/familysuite.jpg" id="room1">
+        </div>
+        <div id="room1Hover">
+          <p style="font-weight: bold; font-size: 18">Family Suite</p>
+          <p>2-4 persons</p>
+          <p>140$/night</p>
+          <button class="btn btn-default">Book</button>
+        </div>
+        <div>
+          <img src="img/suitearmonia3.jpg" id="room2">
+        </div>
+        <div id="room2Hover">
+          <p style="font-weight: bold; font-size: 18">Armonia Suite</p>
+          <p>2-4 persons</p>
+          <p>160$/night</p>
+          <button class="btn btn-default">Book</button>
+        </div>
+      </div>
+      <div class="contentRight" style="position: relative;">
+        <div>
+          <img src="img/superiorroom2.jpg" id="room3">
+        </div>
+        <div id="room3Hover">
+          <p style="font-weight: bold; font-size: 18">Superior Room</p>
+          <p>2-4 persons</p>
+          <p>200$/night</p>
+          <button class="btn btn-default">Book</button>
+        </div>
+        <div>
+          <img src="img/doubleroom.jpg" id="room4">
+        </div>
+        <div id="room4Hover">
+          <p style="font-weight: bold; font-size: 18">Double Room</p>
+          <p>2-4 persons</p>
+          <p>90$/night</p>
+          <button class="btn btn-default">Book</button>
+        </div>
+      </div>
+    </div>
+    <script>
+      $(document).ready(function(){
+        $("#commonContent").load("common.html");
+        $("#room1").mouseenter(function(){
+          $("#room1Hover").css("display", "block");
+        });
+        $("#room1Hover").mouseleave(function() {
+          $("#room1Hover").css("display", "none");
+        });
+        $("#room2").mouseenter(function(){
+          $("#room2Hover").css("display", "block");
+        });
+        $("#room2Hover").mouseleave(function() {
+          $("#room2Hover").css("display", "none");
+        });
+        $("#room3").mouseenter(function(){
+          $("#room3Hover").css("display", "block");
+        });
+        $("#room3Hover").mouseleave(function() {
+          $("#room3Hover").css("display", "none");
+        });
+        $("#room4").mouseenter(function(){
+          $("#room4Hover").css("display", "block");
+        });
+        $("#room4Hover").mouseleave(function() {
+          $("#room4Hover").css("display", "none");
+        });
+      });
+    </script>
+  </body>
+</html>

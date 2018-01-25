@@ -1,0 +1,31 @@
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+    <script src="js/jquery.js"></script>
+  </head>
+  <body>
+    <div id="contentSpace">
+      <div id="commonContent"></div>
+      <div id="servicesDescDiv">
+        <h3>Services</h3>
+        <p>Като услуги предлагаме всичко, за което можете да се сетите. От
+        екстри като външно джакузи до основните неща потребни на всеки като
+        безплатен Wi-Fi и пералнe помещениe</p>
+      </div>
+      <div class="servicesContentDiv">
+        <img src="img/jacuzzi1.jpg">
+        <img src="img/wifi1.png">
+        <img src="img/billard.jpg">
+        <img src="img/laundry.jpg">
+        <img src="img/fitness.jpg">
+        <img src="img/tabletennis.jpg">
+      </div>
+    </div>
+    <script>
+      $(document).ready(function(){
+        $("#commonContent").load("common.html");
+      });
+    </script>
+  </body>
+</html>
